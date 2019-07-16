@@ -1,0 +1,14 @@
+<div class="row" *ngIf="allBlogs.length>0">
+  <div *ngFor="let blog of allBlogs" class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{blog.title}}</h5>
+        <p class="card-text">{{blog.description}}</p>
+        <p class="card-text">is created by {{blog.author}}</p>
+        <p class="card-text">is published on {{blog.created|date}}</p>
+        <a [routerLink]="['/blog',blog.blogId]" class="btn btn-primary">Go to Blog</a>
+      </div>
+    </div>
+  </div>
+</div>  
+  

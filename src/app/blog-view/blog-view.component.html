@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="row" *ngIf="currentBlog">
+    <div class="col-md-6">
+      <h2>{{currentBlog.title}}</h2>
+      <p>{{currentBlog.description}}</p>
+      <div [innerHtml]="currentBlog.bodyHtml">
+
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <a [routerLink]="['/edit', currentBlog.blogId]" class="btn btn-success">Edit</a>
+    </div>
+    <div class="col-md-4">
+      <a (click)="deleteThisBlog()" class="btn btn-danger">Delete</a>
+    </div>
+    <div class="col-md-4">
+      <a (click)="goBackToPreviousPage()" class="btn btn-warning">Go Back</a>
+    </div>
+  </div>
+</div>
