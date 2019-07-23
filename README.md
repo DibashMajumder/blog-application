@@ -20,23 +20,23 @@ There are several ways you can get this project:
 
 #### Cloning The GitHub Repository
 
-The recommended way to get MEAN.js is to use git to directly clone the MEAN.JS repository:
+The recommended way to get this project is to use git to directly clone the repository:
 
 ```
 https://github.com/Dibash7/blog-application.git
 ```
 
-This will clone the latest version of the MEAN.JS repository to a meanjs folder.
+This will clone the latest version of the blo application repository to a folder.
 
 #### Downloading The Repository Zip File
 
-Another way to use the MEAN.JS boilerplate is to download a zip copy from the master branch on GitHub.
+Another way to use the project is to download a zip copy from the master branch on GitHub.
 
 ### Quick Install
 
-Once you've downloaded the boilerplate and installed all the prerequisites, you're just a few steps away from starting to develop your MEAN application.
+Once you've downloaded the project and installed all the prerequisites, you're just a few steps away from starting to develop your Blog application.
 
-The boilerplate comes pre-bundled with a package.json and bower.json files that contain the list of modules you need to start your application.
+The boilerplate comes pre-bundled with a package.json file that contain the list of modules you need to start your application.
 
 To install the dependencies, run this in the application folder from the command-line:
 
@@ -52,53 +52,18 @@ This command does a few things:
 
 ## Running Your Application
 
-Run your application using npm:
+Run your application using angular-cli:
 
 ```
-npm install
+ng serve
 ```
 
-Your application should run on port 3000 with the development environment configuration, so in your browser just go to http://localhost:3000
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+Your application should run on port 4200 with the development environment configuration, so in your browser just go to http://localhost:4200
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Dibash Majumder** - [Dibash7](https://github.com/Dibash7)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -106,6 +71,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* 
+
