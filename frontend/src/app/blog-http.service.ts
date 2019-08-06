@@ -11,7 +11,7 @@ export class BlogHttpService {
   public allBlogs;
   public currentBlog;
   public blogData;
-  public baseURL = 'https://blogapp.edwisor.com/api/v1';
+  public baseURL = 'http://localhost:3000/api/v1';
   public myAuthToken = authToken ;
 
   constructor(private _http: HttpClient) {
@@ -26,7 +26,7 @@ export class BlogHttpService {
 
   public getAllBlogs(): any {
     const myResponse = this._http.get(
-      this.baseURL + '/blogs/all' + '?authToken=' + this.myAuthToken
+      this.baseURL + '/blogs/all'
     );
     console.log(myResponse);
     return myResponse;
@@ -34,25 +34,27 @@ export class BlogHttpService {
 
   public getSingleBlogDetails(currentBlog): any {
     const myResponse = this._http.get(
-      this.baseURL + '/blogs/view/' + currentBlog + '?authToken=' + this.myAuthToken
+      this.baseURL + '/blogs/view/' + currentBlog
     );
     console.log(myResponse);
     return myResponse;
   }
 
   public createBlog(blogData): any {
-    const myResponse = this._http.post(this.baseURL + '/blogs/create' + '?authToken=' + this.myAuthToken, blogData);
+    const myResponse = this._http.post(this.baseURL + '/blogs/create', blogData);
     return myResponse;
   }
 
   public deleteBlog(blogId): any {
     const data = {};
-    const myResponse = this._http.post(this.baseURL + '/blogs/' + blogId + '/delete' + '?authToken=' + this.myAuthToken, data);
+    const myResponse = this._http.post(this.baseURL + '/blogs/' + blogId + '/delete', data);
     return myResponse;
   }
 
   public editBlog(blogId, blogData): any {
-    const myResponse = this._http.put(this.baseURL + '/blogs/' + blogId + '/edit' + '?authToken=' + this.myAuthToken, blogData);
+    const myResponse = this._http.put(this.baseURL + '/blogs/' + blogId + '/edit', blogData);
     return myResponse;
   }
 }
+
+// + '?authToken=' + this.myAuthToken

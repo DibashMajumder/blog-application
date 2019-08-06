@@ -9,14 +9,18 @@ import { ToastrService } from 'ngx-toastr';
   styleUrls: ['./blog-create.component.css']
 })
 export class BlogCreateComponent implements OnInit {
-
   public blogTitle: string;
   public blogBodyHtml: string;
   public blogDescription: string;
   public blogCategory: string;
   public possibleCategories = ['Comedy', 'Drama', 'Action', 'Technology'];
 
-  constructor(private _route: ActivatedRoute, private router: Router, private blogHttpService: BlogHttpService, private toastr: ToastrService) {
+  constructor(
+    private _route: ActivatedRoute,
+    private router: Router,
+    private blogHttpService: BlogHttpService,
+    private toastr: ToastrService
+  ) {
     console.log('Blog Create constructor is called');
   }
 
@@ -25,6 +29,7 @@ export class BlogCreateComponent implements OnInit {
   }
 
   public createBlog(): any {
+    // tslint:disable-next-line:prefer-const
     let blogData = {
       title: this.blogTitle,
       description: this.blogDescription,
@@ -35,21 +40,19 @@ export class BlogCreateComponent implements OnInit {
     console.log(blogData);
 
     this.blogHttpService.createBlog(blogData).subscribe(
-      data =>{
+      data => {
         console.log('Blog Created');
         console.log(data);
         this.toastr.success('Blog created successfully', 'Success');
-        setTimeout(()=>{
-          this.router.navigate(['/blog', data.data.blogId])
-        },1000);
+        setTimeout(() => {
+          this.router.navigate(['/blog', data.data.blogId]);
+        }, 1000);
       },
-      error =>{
+      error => {
         console.log('Some error occured while creating blog');
         console.log(error.errorMessage);
         this.toastr.error('Some error ocuured', 'Error');
       }
-    )
-    
+    );
   }
-
 }
