@@ -1,9 +1,11 @@
+require '../auth/key.js';
+
 let appConfig = {
     port: 3000,
     allowedCorsOrigin: "*",
     env: "dev",
     db: {
-        uri: "mongodb://127.0.0.1:27017/blog-application"
+        uri: `mongodb+srv://${mongoAuth.user}:${mongoAuth.password}@cluster0-cdodn.mongodb.net/blog-application?retryWrites=true&w=majority`
     },
     apiVersion: "/api/v1"
 };
