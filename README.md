@@ -6,7 +6,7 @@ Blog Application
 
 This is a simple blog application with CRUD functionality implemented using MEAN stack.
 
-![Blog Application GIF](https://github.com/Dibash7/blog-application/blob/master/ezgif.com-gif-maker.gif)
+![Blog Application GIF](https://github.com/Dibash7/blog-application/blob/master/blog-application.gif)
 
 ### Prerequisites
 
