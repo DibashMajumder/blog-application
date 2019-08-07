@@ -14,6 +14,12 @@
         </div>
 
         <div class="form-group">
+          <label>Created By</label>
+          <input type="text" name="blogAuthor" [(ngModel)]="blogAuthor" #author="ngModel" class="form-control"
+            placeholder="Enter blog author name" required>
+        </div>
+
+        <div class="form-group">
           <label>Description</label>
           <input type="text" name="blogDescription" [(ngModel)]="blogDescription" #description="ngModel" class="form-control"
             placeholder="Enter blog description" required>

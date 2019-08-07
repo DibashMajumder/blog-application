@@ -13,6 +13,7 @@ export class BlogCreateComponent implements OnInit {
   public blogBodyHtml: string;
   public blogDescription: string;
   public blogCategory: string;
+  public blogAuthor: string;
   public possibleCategories = ['Comedy', 'Drama', 'Action', 'Technology'];
 
   constructor(
@@ -34,7 +35,8 @@ export class BlogCreateComponent implements OnInit {
       title: this.blogTitle,
       description: this.blogDescription,
       blogBody: this.blogBodyHtml,
-      category: this.blogCategory
+      category: this.blogCategory,
+      author: this.blogAuthor
     };
 
     console.log(blogData);
