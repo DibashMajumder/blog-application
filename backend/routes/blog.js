@@ -5,7 +5,7 @@ const blogController = require('../controllers/blogController');
 let setRouter = (app) => {
 
     let baseUrl = `${appConfig.apiVersion}/blogs`;
-
+    
     app.get(`${baseUrl}/all`, blogController.getAllBlogs);
     app.get(`${baseUrl}/view/:blogId`, blogController.viewByBlogId);
     app.get(`${baseUrl}/view/author/:author`, blogController.viewByAuthor);
@@ -17,5 +17,5 @@ let setRouter = (app) => {
 }
 
 module.exports = {
-    setRouter
+    setRouter: setRouter
 }

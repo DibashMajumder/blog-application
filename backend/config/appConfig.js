@@ -1,11 +1,11 @@
-require '../auth/key.js';
+const mongo = require('../auth/key');
 
 let appConfig = {
-    port: 3000,
+    port: process.env.PORT || 3000,
     allowedCorsOrigin: "*",
     env: "dev",
     db: {
-        uri: `mongodb+srv://${mongoAuth.user}:${mongoAuth.password}@cluster0-cdodn.mongodb.net/blog-application?retryWrites=true&w=majority`
+        uri: mongo.mongo_uri
     },
     apiVersion: "/api/v1"
 };

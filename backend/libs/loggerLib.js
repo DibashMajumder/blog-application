@@ -1,4 +1,9 @@
-const logger = require('pino')();
+const pino = require('pino');
+const logger = pino({
+    prettyPrint: {
+        colorize: true
+    }
+});
 const moment = require('moment');
 
 let captureError = (errorMessage, errorOrigin, errorLevel) => {

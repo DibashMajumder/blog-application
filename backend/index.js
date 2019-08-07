@@ -16,7 +16,7 @@ app.use(routeLoggerMiddleware.requestIpLogger);
 
 let modelsPath = './models';
 fs.readdirSync(modelsPath).forEach(function(file) {
-    if(~file.indexOf(.js)) {
+    if(~file.indexOf('.js')) {
         console.log(file);
         require(modelsPath + '/' + file);
     }
@@ -24,16 +24,17 @@ fs.readdirSync(modelsPath).forEach(function(file) {
 
 let routesPath = './routes';
 fs.readdirSync(routesPath).forEach(function (file) {
-    if (~file.indexOf(.js)) {
+    if (~file.indexOf('.js')) {
         console.log(file);
-        require(routesPath + '/' + file);
+        let route = require(routesPath + '/' + file);
+        route.setRouter(app);
     }
 })
 
 app.use(errorHandlerMiddleware.notFoundHandler);
 
 app.listen(appConfig.port, () => {
-    console.log('Node server is running on port 3000');
+    console.log(`Node server is running on port ${appConfig.port}`);
     mongoose.connect(appConfig.db.uri);
 });
 
